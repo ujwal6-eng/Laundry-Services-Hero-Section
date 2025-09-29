@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Mart - Quick & Easy Service</title>
+    <style>
+        /* General Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f9;
+            color: #333;
+        }
+
+        /* 1. Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5vh 5vw; /* Use vh/vw for responsive padding */
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #007bff; /* Primary brand color */
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .user-info {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* 2. Hero Section Styles */
+        .hero-section {
+            /* Set height to 100vh minus the height of the navbar */
+            /* Using calc for precise control */
+            height: calc(100vh - 80px); /* Adjust 80px based on actual navbar height */
+            display: flex;
+            align-items: center; /* Vertically center content */
+            padding: 0 5vw;
+            background-color: #e6f0ff; /* Light background for the section */
+        }
+        
+        /* Adjusting hero height dynamically for better fit */
+        @media (max-width: 768px) {
+             .hero-section {
+                /* On smaller screens, allow slightly more space */
+                height: auto;
+                flex-direction: column;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+
+        .hero-left {
+            flex: 1;
+            padding-right: 5vw;
+            max-width: 50%; /* Limit width of text content */
+        }
+        
+        @media (max-width: 768px) {
+            .hero-left {
+                max-width: 100%;
+                padding-right: 0;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+        }
+
+        .hero-heading {
+            font-size: 4.5em; /* Large, impactful heading */
+            color: #007bff;
+            margin-bottom: 0.1em;
+            line-height: 1.1;
+        }
+
+        .hero-description {
+            font-size: 1.3em;
+            color: #555;
+            margin-bottom: 2em;
+        }
+
+        .book-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ff5722; /* Action color */
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .book-button:hover {
+            background-color: #e64a19;
+            transform: translateY(-2px);
+        }
+
+        .hero-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+             .hero-right {
+                width: 80vw; /* Take up 80% of viewport width on small screens */
+                flex: none; /* Disable flex growth */
+            }
+        }
+
+        .hero-image {
+            max-width: 100%;
+            max-height: 70vh; /* Max height relative to viewport height */
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">LAUNDRY MART</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="user-info">
+            Welcome, **John Doe**
+        </div>
+    </nav>
+
+    <section class="hero-section" id="home">
+        
+        <div class="hero-left">
+            <h1 class="hero-heading">
+                Fresh Laundry, <br> Delivered to Your Door.
+            </h1>
+            <p class="hero-description">
+                Say goodbye to laundry day hassle. We offer premium washing, ironing, and dry-cleaning services with fast pickup and delivery right where you are. Effortless clean clothes are just a click away.
+            </p>
+            <button class="book-button">
+                Book a Service Today
+            </button>
+        </div>
+
+        <div class="hero-right">
+            <img 
+                src="https://picsum.photos/600/500?random=1" 
+                alt="Image of fresh, folded laundry or a modern laundry machine" 
+                class="hero-image"
+            >
+        </div>
+    </section>
+
+</body>
+</html>
